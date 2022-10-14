@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 12px;
+}
+
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-track {
+    background: #d1d1d1;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #666666;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #333333;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+.div-lside {
+    background-color: #5B2E90;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.title-1 {
+    color: #fff;
+    font-size: 72px; 
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.title-2 {
+    color: #F59958;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.copyright {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    font-size: 12px;
+}
+
+.div-rside {
+    background-color: #F1F3F6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-form img {
+    margin-left: 26%;
+    margin-bottom: 11%;
+    width: 60%;
+}
+
+.div-form .btn_login {
+    width: 100%;
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.div-form-control {
+    min-height: 6em;
+}
+
+.invalid-feedback p {
+    font-size: .9em;
+    margin-left: .7em;
+}
+
+.div-form .btn_login:hover {
+    color: #fff;
+    background-color: #ffb200;
+    border-color: #ffb200;
+}
+
+@media screen and (max-width: 780px) {
+    .div-lside {
+        height: 0vh;
+    }
+}
+
+.helplogin {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}

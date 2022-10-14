@@ -1,0 +1,28 @@
+.body_site {
+    margin-left: 50px;
+    margin-top: 60px;
+    margin-right: 10px;
+}
+
+.body_site .ajust-div {
+    margin: 0;
+    padding: 0;
+}
+
+.div-card {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #FFFFFF;
+    border: none !important;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 1px !important;
+}
+
+.title-card {
+    font-size: 14px !important;
+    font-weight: bold;
+}

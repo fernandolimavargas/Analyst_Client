@@ -1,0 +1,147 @@
+.container-carousel {
+    height: 165px !important;
+    padding: 0 5px;
+}
+
+.box-card {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #FFFFFF;
+    border: none !important;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 1px !important;
+    padding: 0 2em;
+}
+
+.card-body i {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    font-size: 21px;
+}
+
+#BsBug {
+    color: #CB1616;
+    font-size: 1.255rem;
+}
+
+#IoBuildOutline {
+    color: #6371EA;
+}
+
+#MdAttachMoney {
+    color: #299a17;
+}
+
+#IoHelpBuoyOutline {
+    color: #DF924A
+}
+
+#TbHeadset {
+    color: #A85FE2;
+}
+
+#FiShare2 {
+    color: #EA7830;
+}
+
+#TbDatabaseImport {
+    color: #a1087e;
+}
+
+#VscTriangleLeft {
+    color: #2b5b9d;
+    rotate: 45deg;
+    font-size: 1.675rem;
+}
+
+#BiDna {
+    color: #1CA510;
+}
+
+#RiDatabaseLine {
+    color: #6371EA;
+}
+
+.title-card {
+    font-size: .775em !important;
+} 
+
+.numbers {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content:space-around;
+     padding: 3px 5px;
+     width: 100%;
+     background-color: #F8F8F8;
+     border-radius: 4px;
+ }
+
+ .open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ED6363;
+ }
+
+ .closed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1CA510;
+ }
+
+ .open span{
+    font-size: .675rem;
+    font-weight: 700;
+ }
+
+ .closed span{
+    font-size: .675rem;
+    font-weight: 700;
+ }
+
+.btn-carousel {
+    border: none !important;
+    font-size: .475rem !important;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #5b2e90 !important;
+    border-radius: 3px !important;
+}
+
+.btn-carousel:hover {
+    background-color: #572e86 !important;
+    transition: 0.5s !important;
+}
+
+.btn-carousel a:link, .btn-carousel a:visited {
+    color: #fff !important;
+}
+
+.btn-carousel a:hover {
+    color: #fff !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.rec.rec-arrow {
+    height: 0px !important;
+    width: 0px !important;
+    min-width: 0 !important;
+    font-size: .975em;
+    margin-top: -50px;
+}
+
+.rec.rec-arrow-left {
+    padding-right: .2em;
+}

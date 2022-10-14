@@ -1,0 +1,51 @@
+.div-table-registration {
+    position: relative;
+    height: 67.8vh;
+    width: 100%;
+    overflow-y: scroll;
+    font-size: .675em;
+    background-color: #ffffff !important;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+    border-bottom: 10px solid #8527b0;
+}
+
+.div-table-registration table {
+    margin-bottom: 0px !important;
+}
+
+
+.table-registration {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-registration td {
+    border-left: .5px solid rgb(202, 199, 199);
+    cursor: pointer;
+}
+
+.table-header {
+    position: sticky;
+    top: 0;
+    background-color: #8527b0 !important;
+    color: #ffffff;
+    font-size: .875em;
+    border-left: .5px solid rgb(202, 199, 199);
+}
+
+.search-input {
+    font-size: .675em !important;
+    border-radius: 0;
+}
+
+.search-input:focus {
+    box-shadow: none;
+    border: 1px solid #9c27b0;
+}
+
+
+.search-label {
+    background-color: #8527b0;
+    color: #ffffff;
+    border-radius: 0;
+}

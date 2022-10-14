@@ -1,0 +1,58 @@
+.element {
+    opacity: .7;
+    animation: animation-loading 1s linear infinite alternate;
+}
+
+.animation-risk {
+    width: 100%;
+    height: .8em;
+    margin-bottom: .3em;
+}
+
+.container-loading {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.group-elements {
+    margin-top: 1em;
+    margin-bottom: 1.3em;
+}
+
+.circle {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin-bottom: .3em;
+}
+
+.group-circle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.db-risk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.animation-db1-risk {
+    width: 65%;
+    height: .8em;
+}
+
+.animation-db2-risk {
+    width: 30%;
+    height: .8em;
+}
+
+@keyframes animation-loading {
+    0% {
+        background-color: #c2c2c2;
+    }
+    100% {
+        background-color: #ededed;
+    }
+}
