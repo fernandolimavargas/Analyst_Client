@@ -1,0 +1,76 @@
+.dropdownMenuNotification {
+  position: absolute;
+  top: 80%;
+  width: 300px;
+  right: 60px;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dropdown-notification-title {
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.dropdown-list {
+  max-height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  border: 1px solid rgb(233, 233, 233);
+  white-space: normal;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.title-not {
+  margin-top: 5px;
+}
+
+.title-not span {
+  color: #872498;
+  font-size: 14px !important;
+  font-weight: 600;
+  margin: 0px !important;
+}
+
+.infs-nots-dta {
+  color: rgb(90, 89, 89);
+  font-size: 11px !important;
+  margin: 0 !important;
+}
+
+.infs-nots {
+  color: rgb(90, 89, 89);
+  font-size: 12px;
+  margin-bottom: -10px;
+}
+
+.notification-icon-not-read {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 12px;
+}
+
+.notification-icon-read {
+  color: rgb(218, 218, 218);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 12px;
+}
+
+.notification-icon-read svg {
+  color: rgb(218, 218, 218);
+}
+
+.title-no-notification {
+  padding: 10px;
+  color: rgb(90, 89, 89);
+}

@@ -1,38 +1,38 @@
 .element-corousel {
-    opacity: .7;
-    animation: animation-loading 1s linear infinite alternate;
+  opacity: 0.7;
+  animation: animation-loading 1s linear infinite alternate;
 }
 
 .animation-risk-corousel {
-    width: 60% !important;
-    height: 1.2em !important;
+  width: 60% !important;
+  height: 1.2em !important;
 }
 
 .circle-corousel {
-    width: 1.2em !important;
-    height: 1.2em !important;
-    border-radius: 50%;
-    margin-top: 5px;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  border-radius: 50%;
+  margin-top: 5px;
 }
 
 .square-corousel {
-    width: 2.6em !important;
-    height: 1.5em !important;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  width: 2.6em !important;
+  height: 1.5em !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .btn-loading-corousel {
-    height: 30px !important;
-    width: 70px;
-    margin: 12px 0 12px 0;
+  height: 30px !important;
+  width: 70px;
+  margin: 12px 0 12px 0;
 }
 
 @keyframes animation-loading {
-    0% {
-        background-color: #c2c2c2;
-    }
-    100% {
-        background-color: #ededed;
-    }
+  0% {
+    background-color: #c2c2c2;
+  }
+  100% {
+    background-color: #ededed;
+  }
 }

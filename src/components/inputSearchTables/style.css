@@ -1,0 +1,31 @@
+.group-search {
+  position: absolute;
+  bottom: 506px;
+  left: 250px;
+  display: flex;
+  height: 21.5px;
+}
+
+.input-search {
+  border-radius: 0;
+  outline: none !important;
+  padding-left: 4px;
+  border: none;
+  border-bottom: 1px solid #5b2e90;
+}
+
+.icon-search {
+  background-color: #5b2e90;
+  margin-right: 3px;
+  color: #fff;
+  font-size: 14px;
+  width: 23px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+  .group-search {
+    display: none;
+  }
+}

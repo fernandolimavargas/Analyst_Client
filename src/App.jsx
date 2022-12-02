@@ -1,13 +1,18 @@
-import React from "react"
+import React, { useState } from 'react';
 
-import AppRoutes from "./AppRoutes";
+import GlobalContext from './contexts/global';
+import AppRoutes from './AppRoutes';
 
-function App() {
+const App = () => {
+  const [request, setRequest] = useState();
+
   return (
     <div className="app">
-      <AppRoutes /> 
+      <GlobalContext.Provider value={{ request, setRequest }}>
+        <AppRoutes />
+      </GlobalContext.Provider>
     </div>
   );
-}
+};
 
-export default App; 
+export default App;

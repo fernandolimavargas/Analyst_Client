@@ -1,4 +1,43 @@
 .stickyFooter {
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.btn-export-tables {
+  position: absolute;
+  top: 12px;
+  left: 160px;
+  color: #ffffff;
+  font-size: 0.9em;
+  padding: 3px 10px;
+  border: none !important;
+  cursor: pointer;
+  background-color: #5b2e90 !important;
+  border-radius: 3px !important;
+}
+
+.modal-database {
+  position: absolute;
+  right: 30%;
+  top: 30%;
+  width: 400px;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.title-database {
+  font-size: 20px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.modal-database p {
+  text-align:left;
+  font-size: 12px;
+}
+
+.modal-database button {
+  font-size: 16px;
 }

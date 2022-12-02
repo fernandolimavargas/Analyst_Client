@@ -1,0 +1,37 @@
+.container-movements {
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  height: 78vh;
+  padding: 10px 0px;
+  position: relative;
+  overflow: scroll;
+}
+
+.content-movements {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #872498;
+  width: 90%;
+  padding: 5px;
+  transition: all 0.5s;
+  margin: 5px auto;
+}
+
+.content-movements:hover {
+  background-color: #eeeeee;
+}
+
+.title-movs {
+  color: #872498;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.infs-movs-dta {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.infs-movs {
+  font-size: 12px;
+}

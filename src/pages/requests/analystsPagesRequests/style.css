@@ -1,55 +1,38 @@
 .list-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 1em;
-    color: #2c004b;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 1em;
+  color: #2c004b;
 }
 
-
-.form-input {
-    font-size: 12px;
-    padding: 7px !important;
+.reg-form {
+  overflow: auto;
 }
 
-.form-group {
-    position: relative;
+.form-radio {
+  font-size: 12px;
 }
 
-.form-label-error {
-    transition: .2s linear;
-    position: absolute;
-    top: 8px;
-    font-size: 12px;
-    left: 10px;
-    background-color: #FFFFFF;
-    padding: 0 4px 0 4px;
-    pointer-events: none;
+.rmsc .dropdown-heading {
+  font-size: 12px;
+  height: 32px !important;
 }
 
-.form-input::placeholder {
-    color: transparent;
+.dropdown-heading-value span {
+  color: black !important;
 }
 
-.form-input:not(:placeholder-shown) + .form-label-error,
-.form-input:focus + .form-label-error {
-    top: -8px;
-    left: 15px;
-    font-size: 11px;
-    color: #A235B5;
+.dropdown-heading-value span a {
+  background-color: rgb(212, 211, 211);
+  padding: 1.5px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
 }
 
-.buttons {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
-    background-color: #FFFFFF !important;
-    border: 1px solid #A235B5;
-    width: 100%;
-    margin-top: .6em;
-    color: #A235B5;
-    outline-color: #d27ce1;
-}
-
-.icon-button {
-    font-size: 15px;
-    margin-bottom: 3px;
-    margin-right: 6px;
+.requests-registration-table {
+  position: relative;
+  height: 70vh;
+  background-color: #FFF;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
 }

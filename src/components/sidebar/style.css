@@ -1,175 +1,182 @@
 .sidebar {
-    padding: 0!important;
-    overflow-x: hidden;
-    width: 40px;
-    height: 100%;
-    position: fixed !important;
-    z-index: 3;
-    top: 0;
-    padding-bottom: 20px;
-    background-color: #2C004B;
+  padding: 0 !important;
+  overflow-x: hidden;
+  width: 40px;
+  height: 100%;
+  position: fixed !important;
+  z-index: 3;
+  top: 0;
+  padding-bottom: 20px;
+  background-color: #2c004b;
 }
 
 .botside {
-    position: fixed;
-    bottom: 0px;
+  position: fixed;
+  bottom: 0px;
 }
 
-.sidebar img{
-    padding: 10px 9px;
+.sidebar img {
+  padding: 10px 9px;
 }
 
-.sidebar img:hover{
-    background-color: #5f1097;
+.sidebar img:hover {
+  background-color: #5f1097;
 }
 
 .sidebar svg {
-    color: #ffffff;
-    font-size: 38px;
-    padding: 3px 9px;
+  color: #ffffff;
+  font-size: 38px;
+  padding: 3px 9px;
 }
 
 .sidebar svg:hover {
-    background-color: #5B2E90;
+  background-color: #5b2e90;
 }
 
 .offcanvas {
-    width: 270px !important;
-    background-color: #5B2E90;
-    color: #ffffff;
-    text-decoration: none;
-    list-style: none;
+  width: 270px !important;
+  background-color: #5b2e90;
+  color: #ffffff;
+  text-decoration: none;
+  list-style: none;
 }
 
 .offcanvas-header {
-    background-color: #2C004B;
-    height: 45px;
+  background-color: #2c004b;
+  height: 45px;
 }
 
 .offcanvas-body {
-    padding: 0
-} 
+  padding: 0;
+}
 
 .item {
-    background-color: #744da1;
-    border-bottom: 0.2px solid #b9b9b9;
-    cursor: pointer;
+  background-color: #744da1;
+  border-bottom: 0.2px solid #b9b9b9;
+  cursor: pointer;
 }
 
 .item svg {
-    font-size: 20px;
-    padding: 1px 1px;
+  font-size: 20px;
+  padding: 1px 1px;
 }
 
 .item a {
-    color: #ffffff
+  color: #ffffff;
 }
 
 .item-header {
-    padding: 10px 15px;
-    display: flex;
-    cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  cursor: pointer;
 }
 
 .menulist {
-    font-size: 14px;
-    width: 100%;
+  font-size: 14px;
+  width: 100%;
 }
 
 .menu .menulist {
-    display: block;
-    position: relative;
+  display: block;
+  position: relative;
 }
 
 .menu .submenu-appearing {
-    max-height: 22rem !important;
+  max-height: 22rem !important;
 }
 
 .menu .submenu {
-    overflow: hidden;
-    max-height: 0rem;
-    transition: 0.8s ease-out;
-    background-color: #5B2E90;
+  overflow: hidden;
+  max-height: 0rem;
+  transition: 0.8s ease-out;
+  background-color: #5b2e90;
 }
 
 .menu .submenu a {
-    border-bottom: 0.2px solid #b9b9b97c;
-    display: block;
-    padding: 8px;
-    position: relative;
-    transition: all 0.6s;
+  border-bottom: 0.2px solid #b9b9b97c;
+  display: block;
+  padding: 8px;
+  position: relative;
+  transition: all 0.6s;
 }
 
 .menu .submenu svg {
-    font-size: 17px;
-    padding: 1px 2px 3px 2px;
+  font-size: 17px;
+  padding: 1px 2px 3px 2px;
 }
 
 .menu .submenu a:hover {
-    border-left: 0.3rem solid #f76d2d;
+  border-left: 0.3rem solid #f76d2d;
 }
 
 .menu .submenu a:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 #bugreport {
-    height: 100% !important;
-    width: 100% !important;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .bug-header {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .title-bug {
-    margin-top: 3.2%;
+  margin-top: 3.2%;
 }
 
 .bug-body {
-    padding: 2% 5%;
+  padding: 2% 5%;
 }
 
 .form .form-label {
-    margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .btn_send_bug {
-    color: #fff;
-    width: 30%;
-    background-color: #6c757d;
-    border-color: #6c757d;
-    
+  color: #fff;
+  width: 30%;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
 .btn_send_bug:hover {
-    color: #fff;
-    background-color: #ffb200;
-    border-color: #ffb200;
+  color: #fff;
+  background-color: #ffb200;
+  border-color: #ffb200;
 }
 
-
 @media screen and (max-width: 700px) {
-    .body_site {
-        margin-left: 0px !important;
-    }
-    
-    .sidebar {
-        padding: 0!important;
-        overflow-x: hidden;
-        width: 100%;
-        height: 45px;
-        position: fixed !important;
-        z-index: 1;
-        top: 0;
-        padding-bottom: 20px;
-        background-color: #2C004B;
-    }
+  .body_site {
+    margin-left: 0px !important;
+  }
 
-    .botside {
-        position: fixed;
-        top: 4px;
-        right: 2px;
-    }
-    
+  .sidebar {
+    padding: 0 !important;
+    overflow-x: hidden;
+    width: 100%;
+    height: 45px;
+    position: fixed !important;
+    z-index: 1;
+    top: 0;
+    padding-bottom: 20px;
+    background-color: #2c004b;
+  }
+
+  .botside {
+    position: fixed;
+    top: 4px;
+    right: 2px;
+  }
+}
+
+.div-outside-drodown-notification {
+  background-color: #ffffff00;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }

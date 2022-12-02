@@ -1,0 +1,38 @@
+.modal-body {
+  padding: 12px 25px 12px 25px;
+}
+
+.label-analyst,
+.title-ocurrences {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 1em;
+  color: #2c004b;
+}
+
+.label-analyst {
+  font-size: 12px;
+  margin-left: 11px;
+}
+
+.registration-ocurrences hr {
+  margin: 4px;
+}
+
+.registration-ocurrences {
+  padding: 16px;
+  height: 73vh;
+}
+
+#note {
+  resize: none;
+}
+
+.group-ib-ocurrences {
+  display: flex;
+  justify-content: center;
+}
+
+.ib-ocurrences {
+  font-size: 12px;
+}

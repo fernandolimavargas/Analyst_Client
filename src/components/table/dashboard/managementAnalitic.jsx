@@ -1,26 +1,29 @@
-import React, { Fragment, useState, useEffect } from "react"
-import Box from '@mui/material/Box'
-import PropTypes from 'prop-types'
-import Collapse from '@mui/material/Collapse'
-import IconButton from '@mui/material/IconButton'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
-import TableHead from '@mui/material/TableHead'
-import TableRow from '@mui/material/TableRow'
-import Paper from '@mui/material/Paper'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import TableSortLabel from '@mui/material/TableSortLabel'
-import TableFooter from '@mui/material/TableFooter'
-import { visuallyHidden } from '@mui/utils'
+import React, { Fragment, useState, useEffect } from 'react';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
-import LoadingTables from "../../loadingTables"
+import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import TableSortLabel from '@mui/material/TableSortLabel';
+import { visuallyHidden } from '@mui/utils';
 
-import "./style.css"
+import LoadingTables from '../../loadingTables';
+import FooterTable from '../footerTable';
+import InputSearchTable from '../../inputSearchTables';
 
-import { infFilasGeraisAnalitic } from "../../../services/api"
+import './style.css';
+
+import { infFilasGeraisAnalitic } from '../../../services/api';
 
 const descendingComparator = (a, b, orderBy) => {
   if (b[orderBy] < a[orderBy]) {
@@ -30,13 +33,13 @@ const descendingComparator = (a, b, orderBy) => {
     return 1;
   }
   return 0;
-}
+};
 
 const getComparator = (order, orderBy) => {
   return order == 'desc'
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
-}
+};
 
 const stableSort = (array, comparator) => {
   const stabilizedThis = array.map((el, index) => [el, index]);
@@ -48,8 +51,7 @@ const stableSort = (array, comparator) => {
     return a[1] - b[1];
   });
   return stabilizedThis.map((el) => el[0]);
-}
-
+};
 
 const headCells = [
   {
@@ -91,8 +93,7 @@ const headCells = [
 ];
 
 const EnhancedTableHead = (props) => {
-  const { order, orderBy, onRequestSort } =
-    props;
+  const { order, orderBy, onRequestSort } = props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -125,7 +126,7 @@ const EnhancedTableHead = (props) => {
       </TableRow>
     </TableHead>
   );
-}
+};
 
 EnhancedTableHead.propTypes = {
   numSelected: PropTypes.number.isRequired,
@@ -135,18 +136,13 @@ EnhancedTableHead.propTypes = {
   rowCount: PropTypes.number.isRequired,
 };
 
-const Row = (props) => {
-  const { row } = props;
+const Row = ({ row }) => {
   const [open, setOpen] = useState(false);
   return (
     <Fragment>
       <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <TableCell sx={{ width: 30 }} >
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
+        <TableCell sx={{ width: 30 }}>
+          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
@@ -169,7 +165,7 @@ const Row = (props) => {
           {row.qtdBacklog}
         </TableCell>
       </TableRow>
-      <TableRow >
+      <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={7}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 0 }}>
@@ -179,21 +175,23 @@ const Row = (props) => {
                     <TableCell sx={{ fontSize: 11 }}>% Atingimento</TableCell>
                     <TableCell sx={{ fontSize: 11 }}>% Reabertura</TableCell>
                     <TableCell sx={{ fontSize: 11 }}>% SLA</TableCell>
-                    <TableCell align="right" sx={{ fontSize: 11 }}>% Resposta</TableCell>
-                    <TableCell align="right" sx={{ fontSize: 11 }}>% NPS</TableCell>
+                    <TableCell align="right" sx={{ fontSize: 11 }}>
+                      % Resposta
+                    </TableCell>
+                    <TableCell align="right" sx={{ fontSize: 11 }}>
+                      % NPS
+                    </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <TableRow >
+                  <TableRow>
                     <TableCell component="th" scope="row" sx={{ fontSize: 11 }}>
                       {row.ating}
                     </TableCell>
                     <TableCell component="th" scope="row" sx={{ fontSize: 11 }}>
                       {row.abert}
                     </TableCell>
-                    <TableCell sx={{ fontSize: 11 }}>
-                      {row.sla}
-                    </TableCell>
+                    <TableCell sx={{ fontSize: 11 }}>{row.sla}</TableCell>
                     <TableCell align="right" sx={{ fontSize: 11 }}>
                       {row.res}
                     </TableCell>
@@ -208,59 +206,23 @@ const Row = (props) => {
         </TableCell>
       </TableRow>
     </Fragment>
-  )
-}
-
-Row.propTypes = {
-  row: PropTypes.shape({
-    analista: PropTypes.string.isRequired,
-    time: PropTypes.string.isRequired,
-    qtdFila: PropTypes.number.isRequired,
-    qtdIssue: PropTypes.number.isRequired,
-    qtdMais: PropTypes.number.isRequired,
-    qtdBacklog: PropTypes.number.isRequired,
-    ating: PropTypes.string.isRequired,
-    abert: PropTypes.string.isRequired,
-    sla: PropTypes.string.isRequired,
-    res: PropTypes.string.isRequired,
-    nps: PropTypes.string.isRequired,
-  }).isRequired,
+  );
 };
 
+const ManagmentTable = () => {
+  const [dataTable, setDataTable] = useState();
+  const [order, setOrder] = useState('asc');
+  const [orderBy, setOrderBy] = useState('');
+  const [selected, setSelected] = useState([]);
+  const [search, setSearch] = useState('');
 
-const ManagmentTable = (props) => {
-  const [dataTable, setDataTable] = useState()
-  const [qtdFilaTot, setQtdFilaTot] = useState("")
-  const [qtdIssueTot, setQtdIssueTot] = useState("")
-  const [qtdMaisTot, setQtdMaisTot] = useState("")
-  const [qtdBacklogTot, setQtdBacklogTot] = useState("")
-  const [order, setOrder] = React.useState("asc");
-  const [orderBy, setOrderBy] = React.useState("");
-  const [selected, setSelected] = React.useState([]);
+  const keys = ['analista', 'time'];
 
   useEffect(() => {
-    infFilasGeraisAnalitic()
-      .then((resp) => {
-        setDataTable(resp.data)
-
-        let qtdFilaAux = 0
-        let qtdIssueAux = 0
-        let qtdMaisAux = 0
-        let qtdBacklogAux = 0
-
-        for (let i in resp.data) {
-          qtdFilaAux += resp.data[i].qtdFila
-          qtdIssueAux += resp.data[i].qtdIssue
-          qtdMaisAux += resp.data[i].qtdMais
-          qtdBacklogAux += resp.data[i].qtdBacklog
-        }
-
-        setQtdFilaTot(qtdFilaAux)
-        setQtdIssueTot(qtdIssueAux)
-        setQtdMaisTot(qtdMaisAux)
-        setQtdBacklogTot(qtdBacklogAux)
-      })
-  }, [])
+    infFilasGeraisAnalitic().then((resp) => {
+      setDataTable(resp.data);
+    });
+  }, []);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy == property && order == 'asc';
@@ -270,12 +232,30 @@ const ManagmentTable = (props) => {
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden', boxShadow: 'none', padding: 0, margin: 0 }}>
-      <TableContainer sx={{ maxHeight: 320 }}>
-        {dataTable == undefined ?
-          <LoadingTables />
-          :
+      <TableContainer sx={{ height: 445, maxHeight: 485 }}>
+        {dataTable == undefined ? (
           <Fragment>
-            <Table stickyHeader aria-label="collapsible table" size={'small'}>
+            <ReactHTMLTableToExcel
+              className="btn-export-tables"
+              buttonText="Exportar"
+              table="table-analitc"
+              filename="TPS-Analítico"
+              sheet="Chamados"
+            />
+            <LoadingTables />
+            <InputSearchTable setSearch={setSearch} />
+          </Fragment>
+        ) : (
+          <Fragment>
+            <ReactHTMLTableToExcel
+              className="btn-export-tables"
+              buttonText="Exportar"
+              table="table-analitc"
+              filename="TPS-Analítico"
+              sheet="Chamados"
+            />
+            <InputSearchTable setSearch={setSearch} />
+            <Table stickyHeader aria-label="collapsible table" id="table-analitc" size={'small'}>
               <EnhancedTableHead
                 numSelected={selected.length}
                 order={order}
@@ -284,25 +264,23 @@ const ManagmentTable = (props) => {
                 rowCount={dataTable.length}
               />
               <TableBody>
-                {stableSort(dataTable, getComparator(order, orderBy)).map((row) => {
-                  return (
-                    <Row key={row.analista} row={row} />
-                  )
-                })}
+                {stableSort(dataTable, getComparator(order, orderBy))
+                  .filter((item) => {
+                    return search.toLowerCase() === ''
+                      ? item
+                      : keys.some((key) => item[key].toString().toLowerCase().includes(search.toLowerCase()));
+                  })
+                  .map((row) => {
+                    return <Row key={row.analista} row={row} />;
+                  })}
               </TableBody>
-              <TableFooter className="stickyFooter">
-                <TableRow>
-                  <TableCell className="cellFooter" sx={{ fontSize: 12 }}>Chamados Abertos: {qtdFilaTot}</TableCell>
-                  <TableCell className="cellFooter" sx={{ fontSize: 12 }}>Chamados com issue: {qtdIssueTot}</TableCell>
-                  <TableCell className="cellFooter" sx={{ fontSize: 12 }}>+15 dias: {qtdMaisTot}</TableCell>
-                  <TableCell className="cellFooter" sx={{ fontSize: 12 }}>Backlogs: {qtdBacklogTot}</TableCell>
-                </TableRow>
-              </TableFooter>
+              <FooterTable />
             </Table>
-          </Fragment>}
+          </Fragment>
+        )}
       </TableContainer>
     </Paper>
   );
-}
+};
 
-export default ManagmentTable
+export default ManagmentTable;

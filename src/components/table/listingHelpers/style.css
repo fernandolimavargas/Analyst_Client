@@ -1,0 +1,15 @@
+.table-listing-helpers {
+  height: 70vh;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+}
+
+.row-table-listing {
+  cursor: pointer;
+  transition: all .8s;
+}
+
+.row-table-listing:hover {
+  background-color: rgb(253, 250, 255);
+}

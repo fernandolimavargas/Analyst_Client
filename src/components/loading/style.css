@@ -1,27 +1,32 @@
 .loading {
-    background-color: rgba(89,45,255,.4);
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 3;
+  background-color: rgba(89, 45, 255, 0.4);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
 }
 
 .loading img {
-    width: 5%;
+  width: 5%;
 }
 
 .body_site .loading {
-    margin-left: -50px !important;
-    margin-top: -60px !important;
-    margin-right: -10px !important;
+  margin-left: -50px !important;
+  margin-top: -60px !important;
+  margin-right: -10px !important;
 }
 
+#occurrencesAnalyst .loading {
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+  margin-right: 0px !important;
+}
 
 @media screen and (max-width: 700px) {
-    .body_site .loading {
-        margin-left: 0px !important;
-    }
+  .body_site .loading {
+    margin-left: 0px !important;
+  }
 }

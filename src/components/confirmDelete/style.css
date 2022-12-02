@@ -1,0 +1,27 @@
+#BsQuestionCircleFill {
+  font-size: 40px;
+  margin: 0 auto;
+  color: #a235b5;
+}
+
+.body-confirm-delete {
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.footer-confirm-delete {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-dislike-like {
+  font-size: 17px;
+  margin-right: 3px;
+}
+
+.buttons-confirm-delete {
+  width: 130px;
+  margin: 0 20px;
+}

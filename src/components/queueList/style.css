@@ -1,68 +1,68 @@
 .title-card {
-    margin: .9em;
-    font-size: 14px;
-    font-weight: bolder;
-    text-align: center;
+  margin: 0.9em;
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 #qtd-tps {
-    margin: 0;
-    padding-top: .5em;
-    font-size: .775em;
+  margin: 0;
+  padding-top: 0.5em;
+  font-size: 0.775em;
 }
 
 #icon-mnt-queues {
-    position: absolute;
-    left: 9.5em;
-    top: .2em;
+  position: absolute;
+  left: 9.5em;
+  top: 0.2em;
 }
 
 #title-queues {
-    font-weight: 600;
-    margin: 0 0 .5em 0;
-    font-size: .875em;
+  font-weight: 600;
+  margin: 0 0 0.5em 0;
+  font-size: 0.875em;
 }
 
 .title-control-queues:after {
-    background-color: #000;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    vertical-align: middle;
-    width: 80%;
+  background-color: #000;
+  content: '';
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  width: 80%;
 }
 
 .queue-list {
-    position: relative;
-    font-size: 14px;
-    margin-bottom: 1em;
-    text-align: center;
-    background-color: #fff;
-    padding: .2em 1em .2em 1em;
-    border-radius: .5em;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: #fff;
+  padding: 0.2em 1em 0.2em 1em;
+  border-radius: 0.5em;
 }
 
 .queue-list svg {
-    font-size: .9em;
-    margin: 0 .2em .2em .5em;
+  font-size: 0.9em;
+  margin: 0 0.2em 0.2em 0.5em;
 }
 
 .queue-list span {
-    margin: 0 auto .3em auto;
+  margin: 0 auto 0.3em auto;
 }
 
 .p0 {
-    color: #FF0000;
+  color: #ff0000;
 }
 
 .p1 {
-    color: #FF9200;
+  color: #ff9200;
 }
 
 .p2 {
-    color: #FECA11;
+  color: #feca11;
 }
 
 .p3 {
-    color: #38E21C;
+  color: #38e21c;
 }

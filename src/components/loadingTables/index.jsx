@@ -1,11 +1,9 @@
-import React from "react"
+import React from 'react';
 
-import "./style.css" 
+import './style.css';
 
-const LoadingTables = () => { 
-    return (
-        <div className="loading-tables"></div>
-    )
-}
+const LoadingTables = () => {
+  return <div className="loading-tables"></div>;
+};
 
-export default LoadingTables
+export default LoadingTables;

@@ -1,108 +1,129 @@
 .reg-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 1em;
-    color: #2c004b;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 1em;
+  color: #2c004b;
 }
 
 .form-group {
-    position: relative;
+  position: relative;
 }
 
 .form-select,
 .form-input {
-    font-size: 12px;
-    padding: 7px !important;
+  font-size: 12px;
+  padding: 7px !important;
 }
 
 .form-input::placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 .form-select:focus,
 .form-input:focus {
-    box-shadow: none !important;
-    border-color: #A235B5 !important;
+  box-shadow: none !important;
+  border-color: #a235b5 !important;
 }
 
 .form-label-registration {
-    transition: .2s linear;
-    position: absolute;
-    top: 8px;
-    font-size: 12px;
-    left: 10px;
-    background-color: #FFFFFF;
-    padding: 0 4px 0 4px;
-    pointer-events: none;
+  transition: 0.2s linear;
+  position: absolute;
+  top: 8px;
+  font-size: 12px;
+  left: 10px;
+  background-color: #ffffff;
+  padding: 0 4px 0 4px;
+  pointer-events: none;
+}
+
+.input-box-shadow {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.user-registration-table {
+  position: relative;
+  height: 70vh;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
 }
 
 .input-pass-roles {
-    align-items: center;
+  align-items: center;
 }
 
 .field-roles li {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .float-none {
-    font-size: 12px;
-    margin-left: 10px;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 .form-group-registration .invalid-feedback p {
-    font-size: 12px;
-    position: absolute;
-    top: 33px;
+  font-size: 12px;
+  position: absolute;
+  top: 33px;
 }
 
 .form-select:valid + .form-label-registration,
 .form-select:focus + .form-label-registration,
 .form-input:not(:placeholder-shown) + .form-label-registration,
 .form-input:focus + .form-label-registration {
-    top: -8px;
-    left: 15px;
-    font-size: 11px;
-    color: #A235B5;
+  top: -8px;
+  left: 15px;
+  font-size: 11px;
+  color: #a235b5;
 }
 
 .reg-form,
 .table-analyst {
-    background-color: #FFFFFF;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
-    height: 75vh;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  height: 78vh;
 }
 
 .buttons {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
-    background-color: #FFFFFF !important;
-    border: 1px solid #A235B5;
-    width: 100%;
-    margin-top: .6em;
-    color: #A235B5;
-    outline-color: #d27ce1;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff !important;
+  border: 1px solid #a235b5;
+  width: 100%;
+  margin-top: 0.6em;
+  color: #a235b5;
+  outline-color: #d27ce1;
 }
 
 .buttons:hover {
-    background-color: #fbf5fc !important;
+  background-color: #fbf5fc !important;
 }
 
 .buttons:active {
-    transform: scale(0.98)
+  transform: scale(0.98);
 }
 
 .buttons:disabled {
-    border: 1px solid #ae9eb3;
-    color: #ae9eb3;
-    transform: scale(1);
-    background-color: #FFFFFF !important;
+  border: 1px solid #ae9eb3;
+  color: #ae9eb3;
+  transform: scale(1);
+  background-color: #ffffff !important;
+  cursor: not-allowed;
 }
 
 .reg-form {
-    padding: 2em 1.5em;
+  padding: 2em 1.5em;
 }
 
 .icon-button {
-    font-size: 15px;
-    margin-bottom: 3px;
-    margin-right: 6px;
+  font-size: 15px;
+  margin-bottom: 3px;
+  margin-right: 6px;
+}
+
+.form-label-checkbox {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.form-control-checkbox {
+  margin-left: 8px;
 }

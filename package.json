@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -22,16 +23,19 @@
     "react-dom": "^17.0.2",
     "react-elastic-carousel": "^0.11.5",
     "react-hook-form": "^7.36.0",
+    "react-html-table-to-excel": "^2.0.0",
     "react-icons": "^4.4.0",
+    "react-multi-select-component": "^4.3.4",
     "react-router-dom": "^6.3.0",
+    "rsuite": "^5.22.0",
     "styled-components": "^5.3.5",
-    "swiper": "^8.4.2",
     "toastr": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "prettier": "^2.7.1",
     "vite": "^3.0.0"
   }
 }

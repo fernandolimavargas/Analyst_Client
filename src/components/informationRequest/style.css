@@ -1,0 +1,23 @@
+.modal-content {
+  padding: 0 15px;
+}
+
+.icons-request {
+  font-size: 40px;
+  margin: 0 auto;
+  color: #a235b5;
+}
+
+.confirm-information {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.confirm-information p {
+  margin: 1.5em 0;
+}
+
+.form-group-forwards {
+  margin: 15px auto;
+}
